@@ -1,0 +1,30 @@
+package info.specification;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class PhaseProject {
+	static final String folderpath="D:\\MyPhase1 project\\Phaseproject Files";
+	
+    public static void main(String[] args) {
+    	 // Code to Search a file 
+ 		String fileName;
+ 		Scanner sc=new Scanner(System.in);
+ 		System.out.println("Enter the file name to be searched");
+ 		fileName=sc.nextLine();
+ 		
+ 		boolean isFound=FileManager.tosearchfile(folderpath, fileName);
+ 		
+ 		if(isFound)
+ 		{
+ 			System.out.println("File is present in the folder");
+ 		}
+ 		else
+ 		{
+ 			System.out.println(" File not present in the folder");
+ 		}
+	}
+    	
+    	
+}

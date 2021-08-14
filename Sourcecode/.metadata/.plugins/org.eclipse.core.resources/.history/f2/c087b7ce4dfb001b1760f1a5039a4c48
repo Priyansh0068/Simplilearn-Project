@@ -1,0 +1,13 @@
+package info.specification;
+
+import java.io.File;
+import java.util.List;
+
+public class FileManager {
+	public static List<String> getfiles(String folderpath)
+	{
+		File folder = new File(folderpath);
+		File[] listOfFiles = folder.listFiles();
+	}
+
+}

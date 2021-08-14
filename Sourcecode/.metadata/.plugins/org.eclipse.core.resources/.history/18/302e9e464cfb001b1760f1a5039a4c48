@@ -1,0 +1,5 @@
+package info.specification;
+
+public class FileManager {
+
+}

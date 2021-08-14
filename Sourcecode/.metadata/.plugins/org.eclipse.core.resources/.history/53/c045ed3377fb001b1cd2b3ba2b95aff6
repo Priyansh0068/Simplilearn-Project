@@ -1,0 +1,29 @@
+package info.specification;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class PhaseProject {
+	static final String folderpath="D:\\MyPhase1 project\\Phaseproject Files";
+	
+    public static void main(String[] args) {
+    	// Code to delete a file 
+ 		String fileName;
+ 		Scanner sc=new Scanner(System.in);
+ 		System.out.println("Enter the file name to be deleted");
+ 		fileName=sc.nextLine();
+ 		
+ 		boolean isdeleted=FileManager.todeletefile(folderpath, fileName);
+ 		
+ 		if(isdeleted)
+ 		{
+ 			System.out.println("File deleted successfully");
+ 		}
+ 		else
+ 		{
+ 			System.out.println("Some error occured file not  deleted");
+ 		}
+	}
+
+}

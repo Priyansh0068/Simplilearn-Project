@@ -1,0 +1,14 @@
+package info.specification;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class PhaseProject {
+	static final String folderpath="D:\\MyPhase1 project\\Phaseproject Files";
+	
+    public static void main(String[] args) {
+    	
+	}
+
+}

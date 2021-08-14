@@ -1,0 +1,64 @@
+package info.specification;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class PhaseProject {
+	static final String folderpath="D:\\MyPhase1 project\\Phaseproject Files";
+	
+    public static void main(String[] args) {
+    	
+    	public static void getfiles()
+    	{
+    		List<String> fileNames= FileManager.getfiles(folderpath);
+    		for(String f:fileNames)
+    		{
+    			System.out.println(f);
+    		}
+    	}
+    	
+    	public static void tocreatefile()
+    	{
+    		Scanner sc=new Scanner(System.in);
+    		String fileName;
+    		int countlines;
+    		List<String> c=new ArrayList<String>();
+               
+    		    // Read file name from the user
+    		System.out.println("Enter the file name :");
+    		fileName=sc.nextLine();
+    		
+    		    // Read number of lines from the user
+    		System.out.println("Enter the number of lines :");
+    		countlines=Integer.parseInt(sc.nextLine());
+    		
+    		    //Read line from the user
+    		  for(int i=1;i<=countlines;i++)
+    		  {
+    			  System.out.println("Enter lines "+i+":");
+    			    c.add(sc.nextLine());
+    		  }
+    		  
+    		   //Save the content into the file
+               boolean isSaved =FileManager.tocreatefile(folderpath, fileName, c);
+                   if(isSaved)
+                   {
+                	   System.out.println("File and content saved successfully");
+                   }
+                   else  	   
+               {
+                	   System.out.println("Error occured");
+               }
+                   sc.close();
+    	}
+    	}
+    	
+    	
+    	
+    	
+    }
+
+    	
+    	
+}
